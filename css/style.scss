@@ -1,0 +1,433 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cuprum:wght@400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #B0A8B9;
+  font-family: "Rubik", sans-serif;
+}
+
+.wrapper {
+  position: absolute;
+  width: 960px;
+  height: 572px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(245, 226, 207);
+  overflow: hidden;
+
+  .background {
+    position: absolute;
+    background-image: url(/img/background.png);
+    width: 100%;
+    height: 100vh;
+    z-index: -10;
+  }
+
+  .background_left {
+    position: absolute;
+
+    img {
+      width: 620px;
+      height: 80vh;
+    }
+  }
+
+  .circle {
+    position: absolute;
+    z-index: -1;
+    top: 20%;
+    left: -100px;
+
+    img {
+      width: 260px;
+    }
+  }
+
+  .text-japan {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    z-index: -1;
+
+    img {
+      width: 700px;
+    }
+  }
+
+  .fish {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+  }
+
+  .food {
+    position: absolute;
+    top: 30%;
+    right: 5%;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    font-family: "Noto Sans JP", sans-serif;
+
+    .nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      height: 80px;
+
+      .nav_list li {
+        display: inline-block;
+
+        a {
+          text-decoration: none;
+          text-transform: uppercase;
+          font-size: 12px;
+          font-weight: 600;
+          margin-left: 50px;
+          color: #0c0405;
+          cursor: pointer;
+          transition: 0.5s;
+
+          &:hover {
+            color: #eb5a59;
+          }
+        }
+
+        
+      }
+    }
+
+    .logo {
+      margin-right: 20px;
+      padding: 2px 10px;
+      text-align: center;
+      border: 2px solid #9e9e9e;
+
+      h2 {
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 800;
+        letter-spacing: 5px;
+        color: #eb5a59;
+      }
+
+      p {
+        font-size: 12px;
+        font-weight: 200;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+      }
+    }
+  } //header
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    font-family: "Cuprum", sans-serif;
+
+    .container__text {
+      display: flex;
+      align-items: center;
+
+      h2 {
+        font-size: 40px;
+        font-weight: 400;
+        text-transform: uppercase;
+        transform: rotate(90deg);
+        border: 2px solid #9e9e9e;
+        padding: 10px 20px;
+      }
+    }
+
+    .container__menu {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      width: 30%;
+
+      h2 {
+        font-size: 30px;
+        font-weight: 400;
+        margin-bottom: 20px;
+      }
+
+      h3 {
+        font-size: 20px;
+        font-weight: lighter;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        margin-bottom: 10px;
+      }
+
+      p {
+        font-size: 12px;
+        margin-bottom: 30px;
+      }
+
+      .btn {
+        font-size: 20px;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 10px;
+        letter-spacing: 10px;
+        background: #9e9e9e;
+        cursor: pointer;
+        transition: 0.5s ease-in-out;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+
+    .container__social {
+      position: absolute;  
+      bottom: 80px;
+      right: -30px;
+      z-index: 1;
+
+      .social__item {
+        margin: 20px 30px;
+
+        li {
+          display: inline-block;
+          margin-left: 20px;
+
+          a {
+            color: #9e9e9e;
+          }
+        }
+      }
+    }
+
+    .container__card {
+      position: absolute;
+      height: 80%;
+      display: none;
+      margin-left: 100px;
+      
+
+      .card__1 {
+        position: relative;
+        width: 220px;
+        background: #314854;
+
+        .title {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          font-size: 25px;
+          font-weight: 400;
+          line-height: 40px;
+          margin-right: 80px;
+          margin-top: 50px;
+          color: #eb5a59;
+        }
+
+        .text {
+          position: absolute;
+          width: 50%;
+          margin-left: 90px;
+          text-align: end;
+
+          p {
+            font-size: 12px;
+            font-weight: lighter;
+            color: #fff;
+          }
+        }
+
+        .circle_red {
+          position: absolute;
+          width: 100px;
+          z-index: 10;
+          left: 100px;
+          top: 40px;
+        }
+
+        .circle_white {
+          position: absolute;
+          width: 50px;
+          z-index: 1;
+          left: 100px;
+          top: 120px;
+          padding: 30px;
+          border-radius: 50%;
+          background: #9e9e9e;
+        }
+
+        .ramen {
+          position: absolute;
+          width: 120px;
+          bottom: 20px;
+          right: 20px;
+        }
+
+        .circle {
+          position: absolute;
+          top: 280px;
+          left: 30px;
+          z-index: 10;
+
+          span {
+            display: block;
+            content: "";
+            width: 7px;
+            height: 7px;
+            background-color: #fff;
+            border-radius: 50%;
+            margin-top: 7px;
+          }
+        }
+      } //card 1
+      .card__2 {
+        display: flex;
+        width: 220px;
+        background: #f1d0a0;
+        margin-left: 20px;
+        position: relative;
+
+        .title {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          font-size: 25px;
+          font-weight: 400;
+          line-height: 40px;
+          margin-top: 100px;
+          margin-left: 140px;
+          color: #314854;
+        }
+
+        .text {
+          width: 50%;
+          text-align: start;
+          margin-left: -140px;
+          margin-top: 200px;
+
+          p {
+            font-size: 12px;
+            font-weight: lighter;
+            color: #eb5a59;
+          }
+        }
+
+        .circle {
+          position: absolute;
+          left: 200px;
+          z-index: 10;
+
+          span {
+            display: block;
+            content: "";
+            width: 7px;
+            height: 7px;
+            background-color: #eb5a59;
+            border-radius: 50%;
+            margin-top: 7px;
+          }
+        }
+
+        .circle-2 {
+          position: absolute;
+          bottom: 0;
+        }
+
+        .fish-2 {
+          position: absolute;
+          height: 10%;
+          bottom: 50px;
+          margin-left: 60px;
+        }
+
+        .text-2 {
+          position: absolute;
+          height: 25%;
+          margin-top: 20px;
+          margin-left: 80px;
+        }
+      } //card 2
+
+      .card__3 {
+        display: flex;
+        width: 220px;
+        background: #314854;
+        margin-left: 20px;
+        position: relative;
+
+        .title {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          font-size: 25px;
+          font-weight: 400;
+          line-height: 40px;
+          margin-top: 250px;
+          margin-left: 140px;
+          color: #ffffff;
+        }
+
+        .text {
+          width: 50%;
+          text-align: right;
+          margin-left: -60px;
+          margin-top: 80px;
+
+          p {
+            font-size: 12px;
+            font-weight: lighter;
+            color: #eb5a59;
+          }
+        }
+
+        .circle {
+          position: absolute;
+          left: 20px;
+          top: 350px;
+          z-index: 10;
+
+          span {
+            display: block;
+            content: "";
+            width: 7px;
+            height: 7px;
+            background-color: #0c0405;
+            border-radius: 50%;
+            margin-top: 7px;
+          }
+        }
+
+        .circle-2 {
+            position: absolute;
+        }
+
+        .text-3 {
+            position: absolute;
+            bottom:20px;
+            right: 15px;
+        }
+
+        .woks {
+            position: absolute;
+            top: 120px;
+            left: 15px;
+        }
+      }
+    } //container card
+  } //container
+} //wrapper
